@@ -1,0 +1,1929 @@
+/* ================================
+        Common css part start 
+ ================================
+ */
+
+:root {
+    --fnt: 'Poppins', sans-serif;
+    --cr_46: #464646;
+    --cr_32: #323232;
+    --cr_22: #222222;
+    --cr_15: #151515;
+    --cr_e8: #e8e8e9;
+    --cr_ff: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-size: 20px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+/* ================================
+        Common css part end 
+ ================================= */
+
+
+
+/* ================================
+        Navbar css part start 
+ ================================= */
+
+
+#navbar {
+    background: rgba(39, 43, 44, 0.7);
+    padding: 37px 50px;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    box-shadow: 3px 0px 13px rgba(3, 0, 13, 0.9);
+    z-index: 999;
+    transition: all linear 0.3s;
+}
+
+
+#navbar.sticky {
+    background: var(--cr_15);
+    padding: 37px 50px;
+    display: flex;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    box-shadow: 3px 0px 13px rgba(3, 0, 13, 0.9);
+    z-index: 999;
+    transition: all linear 0.3s;
+    animation: sticky 1s linear;
+}
+
+@keyframes sticky {
+    0% {
+        top: -20%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+
+#navbar .logo {
+    position: relative;
+}
+
+#navbar .logo::after {
+    content: "";
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: var(--cr_ff);
+}
+
+
+#navbar .logo>p {
+    font-size: 20px;
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+    padding-left: 5px;
+}
+
+
+#navbar .menu {
+    position: absolute;
+    top: 37px;
+    right: 50px;
+}
+
+#navbar .menu ul {
+    display: flex;
+    column-gap: 90px;
+}
+
+#navbar .menu ul li:nth-child(6) {
+    padding: 0 40 px;
+}
+
+#navbar .menu ul li>a {
+    color: var(--cr_ff);
+    font-family: var(--fnt);
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+#navbar .menu ul li>i {
+    color: var(--cr_ff);
+    font-size: 17px;
+}
+
+
+/* ================================
+        Navbar css part end 
+ ================================= */
+
+
+/* ================================
+        Banner css part start 
+ ================================= */
+
+#banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#banner .baner_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+
+#banner .baner_img .banner_slider {
+    width: 100%;
+    height: 100%;
+}
+
+#banner .baner_img .banner_slider>img {
+    width: 100%;
+    height: 100%;
+}
+
+#banner .banner_main {
+    padding-top: 280px;
+    position: relative;
+    opacity: 1;
+}
+
+
+#banner .banner_main .text {
+    width: 570px;
+}
+
+#banner .banner_main .text>h1 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 100px;
+    color: var(--cr_ff);
+    text-transform: capitalize;
+}
+
+#banner .banner_main .text>h2 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 100px;
+    color: var(--cr_ff);
+    text-transform: capitalize;
+    margin-top: -50px;
+}
+
+#banner .banner_main .text>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    padding-bottom: 60px;
+    color: var(--cr_ff);
+    padding-right: 50px;
+}
+
+
+
+#banner .banner_main .text>a {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_ff);
+    background: var(--cr_22);
+    padding: 25px 40px;
+    display: inline-block;
+    margin-right: 10px;
+    text-transform: capitalize;
+    transition: all linear 0.4s;
+    margin-bottom: 243px;
+}
+
+
+#banner .banner_main .text>a:hover {
+    color: var(--cr_22);
+    background: var(--cr_ff);
+}
+
+
+
+
+#banner .banner_main .line {
+    position: absolute;
+    top: 265px;
+    left: -240px;
+}
+
+#banner .banner_main .line>p {
+    font-size: 17px;
+    font-family: var(--fnt);
+    font-weight: 400;
+    color: var(--cr_ff);
+    position: relative;
+}
+
+#banner .banner_main .line>p span {
+    display: block;
+    padding-top: 430px;
+}
+
+
+#banner .banner_main .line::after {
+    content: "";
+    width: 1px;
+    height: 377px;
+    background: var(--cr_ff);
+    position: absolute;
+    left: 7px;
+    top: 55px;
+}
+
+
+#banner .baner_img >ul{
+    position: relative;
+    bottom: 615px;
+    left: 126px;
+
+}
+
+
+#banner .baner_img >ul li{
+    height: 80px;
+    width: 10px;
+    background: var(--cr_ff);
+    border-radius: 20px;
+    transition: all linear 0.4s;
+    margin-bottom: 5px;
+    opacity: 0;
+}
+
+#banner .baner_img >ul li.slick-active{
+    height: 80px;
+    width: 10px;
+    background: var(--cr_ff);
+    border-radius: 20px;
+    opacity: 1;
+}
+
+
+#banner .baner_img >ul li button{
+    display: none;
+}
+
+
+/* ================================
+        Banner css part end 
+ ================================= */
+
+/* ================================
+        What we Do css part start 
+ ================================= */
+
+
+#what {
+    padding-top: 94px;
+    padding-bottom: 200px;
+    position: relative;
+}
+
+#what .sect_head>p {
+    text-align: center;
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--cr_46);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#what .sect_head>p::after {
+    content: "";
+    width: 76px;
+    height: 8px;
+    background: var(--cr_46);
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+}
+
+#what .what_info {
+    display: flex;
+}
+
+#what .what_info .what_slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+}
+
+
+#what .what_info .what_slider .website {
+    border: 1px solid var(--cr_e8);
+    padding: 28px 37px;
+    max-width: 368px;
+    transition: all linear 0.4s;
+}
+
+#what .what_info .what_slider .website:hover {
+    border: 1px solid var(--cr_15);
+}
+
+#what .what_info .what_slider .website>img {
+    padding-bottom: 29px;
+}
+
+#what .what_info .what_slider .website>h2 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--cr_15);
+    text-transform: uppercase;
+    padding-bottom: 47px;
+}
+
+
+#what .what_info .what_slider .website>h2 span {
+    display: block;
+    margin-top: -8px;
+}
+
+#what .what_info .what_slider .website>p {
+    font-family: var(--fnt);
+    font-size: 17px;
+    color: var(--cr_15);
+    line-height: 28px;
+    padding-bottom: 43px;
+}
+
+
+#what .what_info .what_slider .website>a {
+    padding: 15px 20px;
+    background: var(--cr_46);
+    color: var(--cr_ff);
+    text-transform: capitalize;
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    display: block;
+    margin-left: 158px;
+}
+
+/* ========== website end ======= */
+
+
+#what .what_info .what_slider .app {
+    border: 1px solid var(--cr_e8);
+    padding: 28px 37px;
+    max-width: 368px;
+    transition: all linear 0.4s;
+}
+
+#what .what_info .what_slider .app:hover {
+    border: 1px solid var(--cr_15);
+}
+
+#what .what_info .what_slider .app>img {
+    padding-bottom: 29px;
+}
+
+#what .what_info .what_slider .app>h2 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--cr_15);
+    text-transform: uppercase;
+    padding-bottom: 47px;
+}
+
+
+#what .what_info .what_slider .app>h2 span {
+    display: block;
+    margin-top: -8px;
+}
+
+#what .what_info .what_slider .app>p {
+    font-family: var(--fnt);
+    font-size: 17px;
+    color: var(--cr_15);
+    line-height: 28px;
+    padding-bottom: 43px;
+}
+
+
+#what .what_info .what_slider .app>a {
+    padding: 15px 20px;
+    background: var(--cr_46);
+    color: var(--cr_ff);
+    text-transform: capitalize;
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    display: block;
+    margin-left: 158px;
+}
+
+/* ========== app end ======= */
+
+
+#what .what_info .what_slider .design {
+    border: 1px solid var(--cr_e8);
+    padding: 28px 37px;
+    max-width: 368px;
+    transition: all linear 0.4s;
+}
+
+#what .what_info .what_slider .design:hover {
+    border: 1px solid var(--cr_15);
+}
+
+
+#what .what_info .what_slider .design>img {
+    padding-bottom: 29px;
+}
+
+#what .what_info .what_slider .design>h2 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--cr_15);
+    text-transform: uppercase;
+    padding-bottom: 47px;
+}
+
+
+#what .what_info .what_slider .design>h2 span {
+    display: block;
+    margin-top: -8px;
+}
+
+#what .what_info .what_slider .design>p {
+    font-family: var(--fnt);
+    font-size: 17px;
+    color: var(--cr_15);
+    line-height: 28px;
+    padding-bottom: 43px;
+}
+
+
+#what .what_info .what_slider .design>a {
+    padding: 15px 20px;
+    background: var(--cr_46);
+    color: var(--cr_ff);
+    text-transform: capitalize;
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    display: block;
+    margin-left: 158px;
+}
+
+/* ========== website end ======= */
+
+
+
+.slick-nexts {
+    padding: 20px 30px;
+    font-family: var(--fnt);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cr_ff);
+    background: var(--cr_46);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -20%;
+    left: 53%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all linear 0.4s;
+}
+
+.slick-prevs {
+    text-align: center;
+    padding: 20px 30px;
+    font-family: var(--fnt);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cr_ff);
+    background: var(--cr_46);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -20%;
+    left: 45%;
+    transform: translateX(-50%);
+    transition: all linear 0.4s;
+}
+
+.slick-nexts:hover {
+    color: var(--cr_15);
+    background: var(--cr_ff);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slick-prevs:hover {
+    color: var(--cr_15);
+    background: var(--cr_ff);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ================================
+        What we Do css part end 
+ ================================= */
+
+/* ================================
+        About css part start 
+ ================================= */
+
+#about {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#about .img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+}
+
+#about .img .slider_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+#about .img .slider_img>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+#about .ovlay {
+    width: 100%;
+    height: 100%;
+    background: rgb(33, 0, 80);
+    opacity: 0.7;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+}
+
+
+#about .about_main {
+    text-align: center;
+    padding-top: 105px;
+    padding-bottom: 210px;
+    z-index: 2;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#about .about_main .text>h2 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--cr_ff);
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 13px;
+}
+
+#about .about_main .text>h2::after {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--cr_ff);
+    height: 10px;
+    width: 81px;
+    content: "";
+}
+
+
+#about .about_main .text>p {
+    padding-top: 25px;
+    color: var(--cr_ff);
+    font-family: var(--fnt);
+    font-size: 17px;
+    padding-bottom: 130px;
+}
+
+
+#about .about_main .playbtn {
+    position: relative;
+    z-index: 1;
+}
+
+#about .about_main .playbtn> a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cr_ff);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#about .about_main .playbtn> a i {
+    font-size: 20px;
+    transition: all linear 0.4s;
+}
+
+#about .about_main .playbtn::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--cr_ff);
+    position: absolute;
+    top: -53px;
+    left: 370px;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    z-index: -1;
+    transition: all linear 0.4s;
+}
+
+#about .about_main .playbtn::before {
+    content: "";
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: var(--cr_ff);
+    position: absolute;
+    top: -86px;
+    left: 370px;
+    transform: translateX(-50%);
+    opacity: 0.3;
+    z-index: -1;
+    transition: all linear 0.4s;
+}
+
+#about .about_main:hover .playbtn::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: -53px;
+    left: 370px;
+    transform: translateX(-50%);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+#about .about_main:hover .playbtn::before {
+    content: "";
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: -86px;
+    left: 370px;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#about .about_main .playbtn>i {
+    background: var(--cr_ff);
+    height: 125px;
+    width: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.vbox-content{
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+}
+
+/* ================================
+        About css part end 
+ ================================= */
+
+
+
+/* ================================
+    Project css part start 
+ ================================= */
+
+#project {
+    padding: 115px 0;
+}
+
+
+#project .project_main .text>p {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--cr_15);
+    text-transform: capitalize;
+    padding: 10px;
+    position: relative;
+}
+
+#project .project_main .text>p::after {
+    content: "";
+    height: 10px;
+    width: 91px;
+    background: var(--cr_32);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+
+
+#project .project_main .img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding-top: 65px;
+}
+
+
+#project .project_main .img .cur {
+    width: 48%;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .cur:hover {
+    box-shadow: 3px 0 54px rgba(0, 0, 0, 0.07);
+}
+
+.showpop{
+    display: none;
+}
+#project .project_main .img .cur> a > img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#project .project_main .img .cur .cur_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: -100%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .cur:hover .cur_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: 0%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+}
+
+
+#project .project_main .img .cur .cur_ovly .icon {
+    display: flex;
+    position: absolute;
+    top: -31px;
+    left: 45px;
+}
+
+
+#project .project_main .img .cur .cur_ovly .icon>i {
+    font-size: 17px;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background: var(--cr_15);
+    color: var(--cr_ff);
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .cur .cur_ovly .icon>i:hover {
+    background: var(--cr_ff);
+    color: var(--cr_22);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#project .project_main .img .cur .cur_ovly>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--cr_15);
+    text-transform: capitalize;
+    padding-top: 27px;
+}
+
+#project .project_main .img .cur .cur_ovly>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_15);
+    padding-top: 21px;
+    line-height: 28px;
+}
+
+
+/* ======= currency end =========== */
+
+
+#project .project_main .img .mar {
+    width: 48%;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .mar:hover {
+    box-shadow: 3px 0 54px rgba(0, 0, 0, 0.07);
+}
+
+#project .project_main .img .mar>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#project .project_main .img .mar .mar_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: -100%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .mar:hover .mar_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: 0%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+}
+
+
+#project .project_main .img .mar .mar_ovly .icon {
+    display: flex;
+    position: absolute;
+    top: -31px;
+    left: 45px;
+}
+
+#project .project_main .img .mar .mar_ovly .icon>i {
+    font-size: 17px;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background: var(--cr_15);
+    color: var(--cr_ff);
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .mar .mar_ovly .icon>i:hover {
+    background: var(--cr_ff);
+    color: var(--cr_22);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#project .project_main .img .mar .mar_ovly>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--cr_15);
+    text-transform: capitalize;
+    padding-top: 27px;
+}
+
+#project .project_main .img .mar .mar_ovly>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_15);
+    padding-top: 21px;
+    line-height: 28px;
+}
+
+
+
+
+/* ======= marketing end =========== */
+
+
+#project .project_main .img .met {
+    width: 48%;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .met:hover {
+    box-shadow: 3px 0 54px rgba(0, 0, 0, 0.07);
+}
+
+#project .project_main .img .met>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#project .project_main .img .met .met_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: -100%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .met:hover .met_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: 0%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+}
+
+
+#project .project_main .img .met .met_ovly .icon {
+    display: flex;
+    position: absolute;
+    top: -31px;
+    left: 45px;
+}
+
+#project .project_main .img .met .met_ovly .icon>i {
+    font-size: 17px;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background: var(--cr_15);
+    color: var(--cr_ff);
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .met .met_ovly .icon>i:hover {
+    background: var(--cr_ff);
+    color: var(--cr_22);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#project .project_main .img .met .met_ovly>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--cr_15);
+    text-transform: capitalize;
+    padding-top: 27px;
+}
+
+#project .project_main .img .met .met_ovly>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_15);
+    padding-top: 21px;
+    line-height: 28px;
+}
+
+
+
+
+/* ======= metting end =========== */
+
+
+#project .project_main .img .con {
+    width: 48%;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .con:hover {
+    box-shadow: 3px 0 54px rgba(0, 0, 0, 0.07);
+}
+
+#project .project_main .img .con>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#project .project_main .img .con .con_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: -100%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .con:hover .con_ovly {
+    position: absolute;
+    background: var(--cr_ff);
+    bottom: 0%;
+    left: 0%;
+    padding: 27px 65px 42px 44px;
+}
+
+
+#project .project_main .img .con .con_ovly .icon {
+    display: flex;
+    position: absolute;
+    top: -31px;
+    left: 45px;
+}
+
+#project .project_main .img .con .con_ovly .icon>i {
+    font-size: 17px;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background: var(--cr_15);
+    color: var(--cr_ff);
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+
+#project .project_main .img .con .con_ovly .icon>i:hover {
+    background: var(--cr_ff);
+    color: var(--cr_22);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#project .project_main .img .con .con_ovly>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--cr_15);
+    text-transform: capitalize;
+    padding-top: 27px;
+}
+
+#project .project_main .img .con .con_ovly>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_15);
+    padding-top: 21px;
+    line-height: 28px;
+}
+
+/* ========= communication ======== */
+
+
+#project .project_main .seebtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 82px;
+}
+
+#project .project_main .seebtn button {
+    color: var(--cr_ff);
+    font-family: var(--fnt);
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 32px 87px;
+    background: var(--cr_22);
+    cursor: pointer;
+}
+
+
+/* ================================
+    Project css part end 
+ ================================ */
+
+/* ================================
+        Chose css part start 
+ ================================= */
+
+#chose {
+    background-color: var(--cr_32);
+    padding: 70px 0;
+}
+
+
+#chose .chose_head>p {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--cr_ff);
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+#chose .chose_head>p::after {
+    content: "";
+    height: 10px;
+    width: 91px;
+    background: var(--cr_ff);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+#chose .chose_main {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#chose .chose_main .project {
+    padding-top: 48px;
+}
+
+#chose .chose_main .project>i {
+    color: var(--cr_ff);
+    font-size: 70px;
+    padding-bottom: 25px;
+}
+
+
+#chose .chose_main .project>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+    font-size: 30px;
+    text-transform: capitalize;
+    padding-bottom: 50px;
+}
+
+#chose .chose_main .project>h3 p {
+    display: block;
+}
+
+#chose .chose_main .project>h3 span {
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+    font-size: 48px;
+    display: inline-block;
+}
+
+
+#chose .chose_main .project>a {
+    font-family: var(--fnt);
+    font-size: 17px;
+    background: var(--cr_ff);
+    color: var(--cr_22);
+    text-transform: capitalize;
+    padding: 20px 45px;
+}
+
+
+#chose .chose_main .client {
+    padding-top: 48px;
+}
+
+#chose .chose_main .client>i {
+    color: var(--cr_ff);
+    font-size: 70px;
+    padding-bottom: 25px;
+}
+
+
+#chose .chose_main .client>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+    font-size: 30px;
+    text-transform: capitalize;
+    padding-bottom: 50px;
+}
+
+#chose .chose_main .client>h3 p {
+    display: block;
+}
+
+#chose .chose_main .client>h3 span {
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+    font-size: 48px;
+    display: inline-block;
+}
+
+
+#chose .chose_main .client>a {
+    font-family: var(--fnt);
+    font-size: 17px;
+    background: var(--cr_ff);
+    color: var(--cr_22);
+    text-transform: capitalize;
+    padding: 20px 45px;
+}
+
+
+#chose .chose_main .award {
+    padding-top: 48px;
+}
+
+#chose .chose_main .award>i {
+    color: var(--cr_ff);
+    font-size: 70px;
+    padding-bottom: 25px;
+}
+
+
+#chose .chose_main .award>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+    font-size: 30px;
+    text-transform: capitalize;
+    padding-bottom: 50px;
+}
+
+
+#chose .chose_main .award>h3 p {
+    display: block;
+}
+
+#chose .chose_main .award>h3 span {
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+    font-size: 48px;
+    display: inline-block;
+}
+
+
+#chose .chose_main .award>a {
+    font-family: var(--fnt);
+    font-size: 17px;
+    background: var(--cr_ff);
+    color: var(--cr_22);
+    text-transform: capitalize;
+    padding: 20px 45px;
+}
+
+
+
+/* ================================
+        Chose css part end 
+ ================================= */
+
+
+/* ================================
+        Touch css part start 
+ ================================= */
+
+#touch {
+    padding: 100px 0;
+}
+
+
+#touch .touch_main {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+#touch .touch_main .touch_head>p {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--cr_32);
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#touch .touch_main .touch_head>p::after {
+    content: "";
+    height: 10px;
+    width: 91px;
+    background: var(--cr_32);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+#touch .touch_main .touch_head .info {
+    padding-top: 45px;
+}
+
+
+#touch .touch_main .touch_head .info>ul {
+    margin-bottom: 45px;
+}
+
+#touch .touch_main .touch_head .info>ul li {
+    margin-bottom: 25px;
+    color: #888888;
+}
+
+#touch .touch_main .touch_head .info>ul li>input {
+    padding: 30px 20px;
+    border: 1px solid #d9d9da;
+    text-transform: capitalize;
+    color: #888888;
+    font-family: var(--fnt);
+    font-size: 17px;
+    min-width: 570px;
+}
+
+
+#touch .touch_main .touch_head .info>ul li>input:focus {
+    border: 1px solid #d9d9da;
+    outline: none;
+}
+
+
+#touch .touch_main .touch_head .info>ul li span>input {
+    padding: 65px 20px;
+    border: 1px solid #d9d9da;
+    text-transform: capitalize;
+    color: #888888;
+    font-family: var(--fnt);
+    font-size: 17px;
+    min-width: 570px;
+}
+
+
+#touch .touch_main .touch_head .info>ul li span>input:focus {
+    border: 1px solid #d9d9da;
+    outline: none;
+}
+
+
+#touch .touch_main .touch_head .info>button {
+    font-family: var(--fnt);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cr_ff);
+    background: var(--cr_32);
+    padding: 40px 75px;
+    font-size: 17px;
+}
+
+#touch .touch_main .clients {
+    width: 50%;
+}
+
+#touch .touch_main .clients>p {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--cr_32);
+    text-transform: capitalize;
+    padding-bottom: 125px;
+}
+
+
+
+#touch .touch_main .clients .info_c {
+    width: 100%;
+}
+
+#touch .touch_main .clients .info_c .den_info {
+    width: 100%;
+}
+
+#touch .touch_main .clients .info_c .den_info .den {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    box-shadow: 3px 0px 51px rgba(0, 0, 0, 0.04);
+    padding: 30px 38px;
+    margin-top: 90px;
+    width: 100%;
+}
+
+#touch .touch_main .clients .info_c .den_info .den>img {
+    display: flex;
+    position: absolute;
+    top: -45px;
+    left: 38px;
+}
+
+#touch .touch_main .clients .info_c .den_info .den>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_32);
+    line-height: 28px;
+    padding-top: 70px;
+    width: 100%;
+    text-align: justify;
+}
+
+
+#touch .touch_main .clients .info_c .den_info .den>h3 {
+    padding-left: 160px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--fnt);
+    color: var(--cr_32);
+    text-transform: capitalize;
+}
+
+#touch .touch_main .clients .info_c .den_info .den>i {
+    padding-left: 200px;
+    font-size: 24px;
+    color: var(--cr_32);
+}
+
+
+
+.slick-next {
+    padding: 20px 30px;
+    font-family: var(--fnt);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cr_ff);
+    background: var(--cr_46);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -28%;
+    left: 55%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all linear 0.4s;
+}
+
+.slick-prev {
+    text-align: center;
+    padding: 20px 30px;
+    font-family: var(--fnt);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cr_ff);
+    background: var(--cr_46);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -28%;
+    left: 40%;
+    transform: translateX(-50%);
+    transition: all linear 0.4s;
+}
+
+.slick-next:hover {
+    color: var(--cr_15);
+    background: var(--cr_ff);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slick-prev:hover {
+    color: var(--cr_15);
+    background: var(--cr_ff);
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ================================
+        Touch css part end 
+ ================================= */
+
+
+/* ================================
+        Footer css part start 
+ ================================= */
+
+#footer {
+    background: var(--cr_22);
+    padding: 100px 0px 60px 0px;
+}
+
+#footer .footer_logo {
+    background: var(--cr_22);
+    padding: 100px 0px 60px 0px;
+}
+
+
+#footer .footer_head .logo {
+    position: relative;
+    width: 20%;
+}
+
+#footer .footer_head .logo::after {
+    content: "";
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: var(--cr_ff);
+}
+
+
+#footer .footer_head .logo>p {
+    font-size: 43px;
+    font-family: var(--fnt);
+    font-weight: 700;
+    color: var(--cr_ff);
+}
+
+#footer .footer_head {
+    display: flex;
+    align-items: center;
+    column-gap: 70px;
+}
+
+#footer .footer_head .subnow {
+    width: 70%;
+    display: flex;
+}
+
+#footer .footer_head .subnow>input {
+    min-width: 570px;
+    padding: 25px 35px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_22);
+}
+
+#footer .footer_head .subnow>input:focus {
+    border: none;
+    outline: none;
+}
+
+#footer .footer_head .subnow>button {
+    min-width: 290px;
+    padding: 25px 70px;
+    font-family: var(--fnt);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cr_ff);
+    background: var(--cr_15);
+    border: none;
+    outline: none;
+}
+
+
+#footer .footer_main {
+    display: flex;
+    margin-top: 105px;
+}
+
+
+#footer .footer_main .link {
+    width: 25%;
+}
+
+#footer .footer_main .link>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 23px;
+    text-transform: uppercase;
+    color: var(--cr_ff);
+}
+
+
+#footer .footer_main .link>ul {
+    padding-top: 35px;
+}
+
+#footer .footer_main .link>ul li {
+    padding-top: 20px;
+}
+
+#footer .footer_main .link>ul li:nth-child(1) {
+    padding-top: 0px;
+}
+
+#footer .footer_main .link>ul li>a {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_ff);
+    text-transform: capitalize;
+}
+
+
+
+#footer .footer_main .news {
+    width: 25%;
+}
+
+#footer .footer_main .news>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 23px;
+    text-transform: uppercase;
+    color: var(--cr_ff);
+}
+
+
+#footer .footer_main .news>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_ff);
+    padding-top: 35px;
+    line-height: 35px;
+    padding-right: 95px;
+}
+
+
+#footer .footer_main .company {
+    width: 25%;
+}
+
+#footer .footer_main .company>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 23px;
+    text-transform: uppercase;
+    color: var(--cr_ff);
+}
+
+
+#footer .footer_main .company>p {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cr_ff);
+    padding-top: 35px;
+    line-height: 35px;
+    padding-right: 95px;
+}
+
+
+#footer .footer_main .contact {
+    width: 25%;
+}
+
+#footer .footer_main .contact>h3 {
+    font-family: var(--fnt);
+    font-weight: 700;
+    font-size: 23px;
+    text-transform: uppercase;
+    color: var(--cr_ff);
+}
+
+
+#footer .footer_main .contact .loca {
+    display: flex;
+    margin-top: 35px;
+    column-gap: 20px;
+    color: var(--cr_ff);
+    justify-content: left;
+    align-items: center;
+}
+
+
+#footer .footer_main .contact .loca>p {
+    text-transform: capitalize;
+    font-family: var(--fnt);
+    font-size: 17px;
+}
+
+#footer .footer_main .contact .loca>i {
+    font-size: 29px;
+}
+
+
+#footer .footer_main .contact .phone {
+    display: flex;
+    margin-top: 35px;
+    column-gap: 20px;
+    color: var(--cr_ff);
+    justify-content: left;
+    align-items: center;
+}
+
+
+#footer .footer_main .contact .phone>p {
+    text-transform: capitalize;
+    font-family: var(--fnt);
+    font-size: 17px;
+}
+
+#footer .footer_main .contact .phone>i {
+    font-size: 29px;
+}
+
+#footer .footer_main .contact .mail {
+    display: flex;
+    margin-top: 35px;
+    column-gap: 20px;
+    color: var(--cr_ff);
+    justify-content: left;
+    align-items: center;
+}
+
+
+#footer .footer_main .contact .mail>p {
+    font-family: var(--fnt);
+    font-size: 17px;
+}
+
+#footer .footer_main .contact .mail>i {
+    font-size: 29px;
+}
+
+
+
+#footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cr_15);
+}
+
+#copyright {
+    background: var(--cr_15);
+}
+
+#copyright .main {
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#copyright .main .text {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: #fefeff;
+    opacity: 0.5;
+}
+
+#copyright .main .text {
+    font-family: var(--fnt);
+    font-weight: 400;
+    font-size: 17px;
+    color: #fefeff;
+    opacity: 0.5;
+}
+
+#copyright .main .icon {
+    font-size: 20px;
+    color: var(--cr_ff);
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#copyright .scrolltop {
+    position: relative;
+}
+
+#copyright .scrolltop>a {
+    color: var(--cr_ff);
+    font-size: 20px;
+    z-index: 999;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: -20%;
+    right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cr_46);
+    border: 2px solid var(--cr_15);
+    transition: all linear 0.4s;
+}
+
+#copyright .scrolltop.toptobottom>a {
+    color: var(--cr_ff);
+    font-size: 20px;
+    z-index: 999;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 11%;
+    right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cr_46);
+    border: 2px solid var(--cr_15);
+    animation: bottom 1s linear;
+}
+
+@keyframes bottom {
+    0% {
+        bottom: -20%;
+    }
+
+    100% {
+        bottom: 11%;
+    }
+}
+
+
+/* ================================
+        Footer css part end 
+ ================================= */
